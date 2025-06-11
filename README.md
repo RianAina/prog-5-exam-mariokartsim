@@ -10,3 +10,6 @@ Run : node MarioKartSimulator.js
 
 
 Have a good game !
+
+
+Subject's link : https://github.com/hei-school/prog-5-exam/blob/main/README.md
