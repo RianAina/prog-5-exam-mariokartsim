@@ -47,7 +47,7 @@ class Player {
 
     // 1 chance sur 5 d'avoir une glissade ou un turbo
     applyRandomEffect() {
-        const chance = Math.floor(Math.random() * 5);
+        const chance = Math.floor(Math.random() * 3);
         if (chance === 0) {
             this.effect = Math.random() < 0.5 ? Effect.GLISSADE : Effect.TURBO;
         } else {
@@ -78,7 +78,7 @@ class Player {
         let movePosition = this.strategy.move(this.position, dice);
 
         if (this.effect === Effect.TURBO) {
-            console.log(`${this.name} obtient un TURBO ! Il avance d'une case supplémentaire.`);
+            console.log(`${this.name} obtient un TURBO ! Avance d'une case supplémentaire.`);
             movePosition += 1;
         }
 
@@ -140,7 +140,7 @@ class Game {
     }
 
     async start() {
-        console.log("\n🏁 La course commence ! 🏁\n");
+        console.log("\n La course commence ! \n");
         let winner = null;
 
         while (!winner) {
@@ -156,7 +156,7 @@ class Game {
             }
         }
 
-        console.log(`\n🏆 ${winner.name} remporte la course ! 🏆`);
+        console.log(`\n ${winner.name} remporte la course ! `);
     }
 }
 
